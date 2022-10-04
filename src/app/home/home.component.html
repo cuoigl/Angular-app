@@ -1,24 +1,38 @@
 <div class="test">
+  <h3>Home Component</h3>
+  <!-- <h2>Hello, {{ name }} </h2> -->
 
-    <h3>Home Component</h3>
-    <h2>Hello, {{ name }} </h2>
-    
-    <!-- <input value="{{ name }}">
+  <!-- <input value="{{ name }}">
     <br/>
     <input [value]="name" title="Here {{ name }}">
     <br/>
     <input [value]="name" [title]="'Here '+ name"> -->
-    
-    <!-- <h3 *ngIf="age > 18">Old !</h3>
-    <h3 *ngIf="age <= 18">Young !</h3> -->
-    <!--  -->
 
+  <!-- <h3 *ngIf="age > 18">Old !</h3>
+    <h3 *ngIf="age <= 18">Young !</h3> -->
+  <!--  -->
+  <!-- 
     <div *ngIf="age <= 18; then young; else old"></div>
     <ng-template #old><h3>Old !</h3></ng-template>
-    <ng-template #young><h3>Young !</h3></ng-template> 
+    <ng-template #young><h3>Young !</h3></ng-template>  -->
 
-    <input type="text" [(ngModel)]="name">
-    <button (click)="resetName()">Reset Name</button> 
+  <!-- <input type="text" [(ngModel)]="age"> -->
+  <!-- <button (click)="resetName()">Reset Name</button>  -->
 
+  <!-- <div *ngFor="let fruit of fruits; let i = index">
+        <li>{{ (i+1) }}. {{fruit}}</li>
+    </div> -->
+
+  <table class="table-collapse">
+    <tr>
+      <th>Serial</th>  
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let fruit of fruitItems; let i = index;">
+      <td>{{ (i+1) }}</td>
+      <td>{{fruit.name}}</td>
+      <td> <span [ngClass]="{'price-red': fruit.sale}">{{fruit.price}} $</span></td>
+    </tr>
+  </table>
 </div>
-

@@ -1,6 +1,20 @@
 .test {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px red;
-    width: 400px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px red;
+  width: 400px;
+}
+
+.table-collapse, td, th {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td, th {
+    min-width: 80px;
+    text-align: center;
+}
+
+.price-red {
+    color: red;
 }
