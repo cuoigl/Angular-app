@@ -1,3 +1,16 @@
 <div class="test">
     <h3>About Page</h3>
+
+    <ul [ngSwitch]="loginType">
+        <li *ngSwitchCase="'user'">
+            <p>User is logged in...</p>
+        </li>
+        <li *ngSwitchCase="'admin'">
+            <p>Admin is logged in...</p>
+            <app-home></app-home>
+        </li>
+        <li *ngSwitchDefault>
+            <p>Please choose login type</p>
+        </li>
+    </ul>
 </div>
