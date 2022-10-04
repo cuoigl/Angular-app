@@ -17,12 +17,12 @@ export class HomeComponent implements OnInit {
   ];
 
   public citis = [
-    { city: 'Choose a city', districts: [] },
+    { city: 'Choose a city', districts: ['Districts'] },
     { city: 'Gia Lai', districts: ['Pleiku', 'ChưProng'] },
     { city: 'Đà Nẵng', districts: ['Cẩm Lệ', 'Ngũ Hành Sơn'] },
   ];
 
-  public districts : string[] = [];
+  public districts : string[] = ['Districts'];
 
   constructor() {}
 
