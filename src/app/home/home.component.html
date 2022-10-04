@@ -28,11 +28,13 @@
       <th>Serial</th>  
       <th>Name</th>
       <th>Price</th>
+      <th></th>
     </tr>
     <tr *ngFor="let fruit of fruitItems; let i = index;">
       <td>{{ (i+1) }}</td>
-      <td>{{fruit.name}}</td>
-      <td> <span [ngClass]="{'price-red': fruit.sale}">{{fruit.price}} $</span></td>
+      <td>{{ fruit.name }}</td>
+      <td> <span [ngClass]="{'price-red': fruit.sale}">{{fruit.price | currency: 'VND':'symbol':"1.2"}}</span></td>
+      <td>{{fruit.sale | onsale | uppercase}}</td>
     </tr>
   </table>
 </div>
