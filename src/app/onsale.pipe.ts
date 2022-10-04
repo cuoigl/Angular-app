@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OnsalePipe implements PipeTransform {
   transform(value: unknown, ...args: unknown[]): string {
     if (value) {
-      return 'On Sale !!';
+      return 'On Sale !';
     }
     return '';
   }
