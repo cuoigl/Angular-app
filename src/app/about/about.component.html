@@ -1,6 +1,9 @@
 <div class="test">
     <h3>About Page</h3>
-
+    <p appHighLight>About Work !</p>
+    <p [appHighLight]="myColor">About Work !</p>
+    <p [appHighLight]="'red'">About Work !</p>
+    
     <ul [ngSwitch]="loginType">
         <li *ngSwitchCase="'user'">
             <p>User is logged in...</p>
