@@ -23,7 +23,7 @@
         <li>{{ (i+1) }}. {{fruit}}</li>
     </div> -->
 
-  <table class="table-collapse">
+  <!-- <table class="table-collapse">
     <tr>
       <th>Serial</th>  
       <th>Name</th>
@@ -36,5 +36,15 @@
       <td> <span [ngClass]="{'price-red': fruit.sale}">{{fruit.price | currency: 'VND':'symbol':"1.2"}}</span></td>
       <td>{{fruit.sale | onsale | uppercase}}</td>
     </tr>
-  </table>
+  </table> -->
+  <br />
+  City: 
+  <select id="city" (change)="changeCity($event)">
+    <option value="{{ city.city }}" *ngFor="let city of citis">{{ city.city }}</option>
+  </select>
+  <br />
+  District:
+  <select id="district">
+    <option value="" *ngFor="let district of districts">{{ district }}</option>
+  </select>
 </div>
