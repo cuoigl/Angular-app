@@ -38,9 +38,11 @@
     </tr>
   </table> -->
   <br />
-  City: 
+  City:
   <select id="city" (change)="changeCity($event)">
-    <option value="{{ city.city }}" *ngFor="let city of citis">{{ city.city }}</option>
+    <option value="{{ city.city }}" *ngFor="let city of citis">
+      {{ city.city }}
+    </option>
   </select>
   <br />
   District:
