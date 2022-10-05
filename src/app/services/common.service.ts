@@ -11,4 +11,8 @@ export class CommonService {
   public Exponential(n: number): number {
     return n * n;
   }
+
+  public submitData(data: any): void {
+    console.log('Send Data to server. Data: ', data);
+  }
 }

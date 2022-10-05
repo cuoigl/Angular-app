@@ -1,0 +1,13 @@
+<h3>TemplateDrivenForm Page</h3>
+
+<form (ngSubmit)="submitForm()">
+  Name:
+  <input
+    type="text"
+    [(ngModel)]="name"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <br />
+  <!-- <button (click)="submitForm()">Submit</button> -->
+  <button>Submit</button>
+</form>
