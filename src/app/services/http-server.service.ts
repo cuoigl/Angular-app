@@ -19,4 +19,10 @@ export class HttpServerService {
     const url = `${this.REST_API_SEVER}/comments`;
     return this.httpClient.get<any>(url, this.httpOptios);
   }
+
+  public postComment(payload: any): Observable<any> {
+    const url = `${this.REST_API_SEVER}/comments`;
+    console.log('postComment', payload);
+    return this.httpClient.post<any>(url, payload, this.httpOptios);
+  }
 }
