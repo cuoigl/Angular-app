@@ -1,5 +1,7 @@
 import { HttpServerService } from './../services/http-server.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-post-data',
@@ -7,12 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-data.component.scss'],
 })
 export class PostDataComponent implements OnInit {
-  constructor(private httpServerService: HttpServerService) {}
+  public formDataNew = this.formBuilder.group({
+    title: ['', Validators.required],
+    author: ['', Validators.required],
+  });
 
-  ngOnInit(): void {
-    const payload = { body: 'some comment 3', postId: 3 };
-    this.httpServerService.postComment(payload).subscribe((data) => {
-      console.log('postComment', data);
+  constructor(
+    private formBuilder: FormBuilder,
+    private common: CommonService,
+    private httpServerService: HttpServerService
+  ) {}
+
+  ngOnInit(): void {}
+
+  onSubmit(): void {
+    const payload = this.formDataNew.value;
+    this.httpServerService.postPost(payload).subscribe((data) => {
+      console.log('postPost', data);
     });
   }
 }
